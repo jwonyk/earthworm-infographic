@@ -22,6 +22,7 @@ To investigate, I used the *Yelp Open Dataset*, which contains information about
 ```{r}
 #| message: false
 #| warning: false
+#| eval: true
 
 # Packages
 library(tidyverse)
@@ -36,7 +37,8 @@ library(dplyr)
 ```{r load-and-filter}
 #| message: false
 #| warning: false
-
+#| eval: true
+#| output: false
 # --------------------------
 # 1) Read businesses + filter to boba
 # --------------------------
@@ -63,6 +65,21 @@ five_more_boba <- boba_biz %>%
 boba_biz <- boba_biz %>%
   semi_join(five_more_boba, by = c("state", "city"))
 
+# Save results so you don't need to rescan the huge review file again
+saveRDS(boba_biz, here("data", "boba_biz.rds"))
+saveRDS(five_more_boba, here("data", "five_more_boba.rds"))
+```
+
+```{r load-boba-biz}
+#| message: false
+#| warning: false
+# --------------------------
+# 1.5) Chunked scan of reviews saved as rds to load in faster
+# --------------------------
+
+# Load the saved output instead of rescanning the full review file
+boba_biz <- readRDS(here("data", "boba_biz.rds"))
+five_more_boba <- readRDS(here("data", "five_more_boba.rds"))
 # Extract the list of boba store IDs & will be used to match review record
 boba_ids <- as.character(boba_biz$business_id)
 ```
@@ -71,6 +88,7 @@ boba_ids <- as.character(boba_biz$business_id)
 #| message: false
 #| warning: false
 #| eval: false
+#| output: false
 
 # --------------------------
 # 2) Chunked scan of reviews to find earliest review date per business
@@ -210,7 +228,7 @@ ggplot(new_per_year, aes(x = first_review_year, y = cumulative)) +
 #| fig-align: "center"
 
 # --------------------------
-# 6) Compare top cities over time
+# 6) Plot 3: Compare top cities over time
 # --------------------------
 
 # Identify the top 5 cities with the most boba shops overall
