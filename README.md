@@ -4,9 +4,13 @@
 
 This project explores the distribution and ecological impacts of invasive Asian jumping worms across different land-cover types in Madison, Wisconsin. The primary goal is to design a data-driven infographic that communicates how jumping worm presence and invasion intensity vary across landscapes such as forests, grasslands, open spaces, residential lawns, and residential gardens.
 
-The visualization combines ecological context with community science data to illustrate where jumping worms are most commonly found and how they may interact with other earthworm species. This project emphasizes data wrangling and accessible visualization design using `{ggplot2}`, and clear communication of ecological patterns to a broad audience.
+The visualization combines ecological context with community science data to illustrate where jumping worms are most commonly found and how they may interact with other earthworm species. This project emphasizes data wrangling, accessible visualization design using `{ggplot2}`, and the clear communication of ecological patterns to a broad audience.
 
 This repository contains all code, documentation, and design materials for the final project in EDS 240. The project focuses on transforming ecological field data into a clear, engaging infographic while balancing accessibility, visual storytelling, and scientific accuracy. The full assignment description can be found on the [course website](https://eds-240-data-viz.github.io/course-materials/assignments/final-project.html).
+
+## Final Infographic
+
+<img width="612" height="936" alt="Infographic-draft-final" src="https://github.com/user-attachments/assets/1aa584a5-2d86-42f0-b1d8-ab4751daba03" />
 
 ## Repository Structure
 
