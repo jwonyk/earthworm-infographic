@@ -1,4 +1,4 @@
-# Final Project (Data-Driven Infographic: Boba Shop Trends)
+# Final Project (Data-Driven Infographic: Earthworm Invasion)
 
 ## Purpose of this project
 
