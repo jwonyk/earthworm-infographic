@@ -15,9 +15,9 @@ This repository contains all code, documentation, and design materials for the f
 ## Repository Structure
 
 ``` bash
-EDS-240-INFOGRAPHICS
+earthworm-infographic
 └── .gitignore
-└── EDS-240-INFOGRAPHICS.Rproj
+└── earthworm-infographic.Rproj
 └── README.md
 └── drafting-viz.qmd
 └── exploration.qmd
